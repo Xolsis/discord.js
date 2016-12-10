@@ -1,0 +1,14 @@
+var Bot = require('discord-bot');
+ 
+var bot = Test({
+    email: <email>,
+    password: <pass>
+});
+ 
+bot
+    .on(bot.triggers.command, 'Hello, if you need help ask the following ranks: Owner, Co-Owner, Super Admin or Admin')
+    .do(function(bot, conf, args) {
+        this.reply('world');
+    });
+ 
+bot.connect();
